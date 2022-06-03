@@ -1,6 +1,6 @@
 <ol>
   <li *ngFor="let col of rows">
-    <div class="cols" *ngFor="let photo of cols">
+    <div class="col" *ngFor="let photo of col">
       <app-photo-frame
       [src]="photo.url"
       [description]="photo.description"
