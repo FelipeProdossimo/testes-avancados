@@ -40,6 +40,14 @@ describe(PhotoBoardService.name, () => {
         expect(photos[1].description).toBe('EXAMPLE 2');
         done();
       });
+
+      //Sem o HttpController não é possível lançar a api ou função no sistema
+      // OU
+      /*
+      Verificar se durante o teste algum requisição foi realizada sem que
+      houvesse uma resposta programática para ele por parte do teste.
+      */
+      //.verify() vai confirmar se os dados estão corretos e terá uma resposta.
       httpController
         .expectOne(mockData.api)
         .flush(mockData.data);
