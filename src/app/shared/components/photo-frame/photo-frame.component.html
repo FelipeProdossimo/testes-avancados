@@ -1,13 +1,13 @@
 <div class="photo-frame-container">
   <img
-  tabindex="0"
-  class="photo"
-  [alt]="description"
-  [src]="src">
+    tabindex="0"
+    class="photo"
+    [alt]="description"
+    [src]="src">
   <div class="like-bar">
-    <app-like-widget>
+    <app-like-widget
       [likes]="likes"
-      (liked)="like()"
+      (liked)="like()">
     </app-like-widget>
   </div>
 </div>
